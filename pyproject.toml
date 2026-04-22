@@ -1,0 +1,42 @@
+[build-system]
+requires = ["uv_build>=0.9.7,<0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "biotic-pipeline"
+description = "Sentence-level biotic interaction detector: GloBI pre-filter + distilled BiomedBERT API"
+readme = "README.md"
+version = "1.0.0"
+
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.40",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.0",
+    "requests>=2.31",
+    "pandas>=2.0",
+    "pyahocorasick>=2.0",
+    "tomli>=2.0.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/ecsltae/biotic-interaction-pipeline"
+Source = "https://github.com/ecsltae/biotic-interaction-pipeline"
+
+[project.scripts]
+biotic-api = "biotic_pipeline.api_server:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I001", "RUF100"]
+ignore = ["E501", "E402"]

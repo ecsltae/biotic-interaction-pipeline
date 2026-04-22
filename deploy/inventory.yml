@@ -1,0 +1,14 @@
+---
+# Example inventory for biotic-pipeline deployment
+# Copy and customize for your environment
+
+all:
+  children:
+    biotic_servers:
+      hosts:
+        biotic-prod:
+          ansible_host: 192.168.1.100
+          ansible_user: ubuntu
+          # Per-host overrides:
+          # biotic_device: "cuda:0"
+          # biotic_port: 8003
