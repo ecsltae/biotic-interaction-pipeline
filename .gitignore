@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual env
+venv/
+env/
+.venv/
+
+# Model files (large — deploy separately, never commit)
+models/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Runtime
+.env
+*.log
+logs/
+*.tmp
+
+# Data
+data/*.csv
+data/*.json
+data/*.tsv
+results/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
