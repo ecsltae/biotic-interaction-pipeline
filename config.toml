@@ -1,0 +1,22 @@
+# Biotic Interaction Pipeline Configuration
+# This file is used as the default; production values are deployed by Ansible
+# from deploy/templates/config.toml.j2
+
+[server]
+host = "0.0.0.0"
+port = 8003
+workers = 1
+log_level = "info"
+
+[model]
+# Path to the HuggingFace model directory (distilled_BiomedBERT_v2 or later)
+model_dir = ""         # must be set before running
+device = "auto"        # auto | cuda:0 | cpu
+threshold = 0.25       # EP-relax F1=0.808 @ this threshold
+max_length = 256
+
+[data]
+# GloBI interaction vocabulary (591 terms) — improves filter recall
+interaction_dict = "data/interaction_dict.csv"
+# Binomial species gazetteer (4.2M names) — species-name fallback in pre-filter
+species_dict = "data/species_dict.csv"

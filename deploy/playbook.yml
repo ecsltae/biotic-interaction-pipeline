@@ -1,0 +1,143 @@
+---
+# Biotic Interaction Pipeline Deployment Playbook
+# Usage: ansible-playbook -i inventory.yml playbook.yml
+
+- name: Deploy biotic-pipeline API
+  hosts: biotic_servers
+  become: true
+  vars:
+    biotic_user: "{{ ansible_user }}"
+    biotic_group: "{{ ansible_user }}"
+
+  tasks:
+    - name: Install system dependencies
+      apt:
+        name:
+          - python3-dev
+          - build-essential
+          - git
+        state: present
+        update_cache: true
+
+    - name: Install uv package manager
+      shell: curl -LsSf https://astral.sh/uv/install.sh | sh
+      args:
+        creates: "{{ ansible_env.HOME }}/.local/bin/uv"
+      become: false
+
+    - name: Create application directory
+      file:
+        path: "{{ biotic_install_dir }}"
+        state: directory
+        owner: "{{ biotic_user }}"
+        group: "{{ biotic_group }}"
+        mode: "0755"
+
+    - name: Create data directory
+      file:
+        path: "{{ biotic_install_dir }}/data"
+        state: directory
+        owner: "{{ biotic_user }}"
+        group: "{{ biotic_group }}"
+        mode: "0755"
+
+    - name: Create model directory
+      file:
+        path: "{{ biotic_install_dir }}/model"
+        state: directory
+        owner: "{{ biotic_user }}"
+        group: "{{ biotic_group }}"
+        mode: "0755"
+
+    - name: Initialize uv project
+      shell: |
+        cd {{ biotic_install_dir }}
+        {{ ansible_env.HOME }}/.local/bin/uv init --no-readme
+      args:
+        creates: "{{ biotic_install_dir }}/pyproject.toml"
+      become: false
+
+    - name: Install biotic-pipeline package
+      shell: |
+        cd {{ biotic_install_dir }}
+        {{ ansible_env.HOME }}/.local/bin/uv add git+{{ biotic_repo_url }}
+      become: false
+      register: uv_install
+      changed_when: "'Already installed' not in uv_install.stdout"
+
+    - name: Sync uv dependencies
+      shell: |
+        cd {{ biotic_install_dir }}
+        {{ ansible_env.HOME }}/.local/bin/uv sync
+      become: false
+
+    - name: Deploy interaction_dict.csv (GloBI terms, ~30KB)
+      get_url:
+        url: "{{ biotic_interaction_dict_url }}"
+        dest: "{{ biotic_install_dir }}/data/interaction_dict.csv"
+        owner: "{{ biotic_user }}"
+        group: "{{ biotic_group }}"
+        mode: "0644"
+        force: true
+      when: biotic_deploy_interaction_dict | default(false)
+
+    - name: Copy species_dict.csv (4.2M binomials, ~150MB)
+      copy:
+        src: "{{ biotic_species_dict_source }}"
+        dest: "{{ biotic_install_dir }}/data/species_dict.csv"
+        owner: "{{ biotic_user }}"
+        group: "{{ biotic_group }}"
+        mode: "0644"
+      when: biotic_deploy_species_dict | default(false)
+
+    - name: Copy model weights from local source
+      copy:
+        src: "{{ biotic_model_source }}/"
+        dest: "{{ biotic_install_dir }}/model/"
+        owner: "{{ biotic_user }}"
+        group: "{{ biotic_group }}"
+        mode: "0644"
+      when: biotic_copy_model | default(false)
+
+    - name: Symlink model directory (if using shared weights)
+      file:
+        src: "{{ biotic_model_source }}"
+        dest: "{{ biotic_install_dir }}/model"
+        state: link
+        force: true
+      when: biotic_link_model | default(false)
+
+    - name: Deploy config.toml
+      template:
+        src: templates/config.toml.j2
+        dest: "{{ biotic_install_dir }}/config.toml"
+        owner: "{{ biotic_user }}"
+        group: "{{ biotic_group }}"
+        mode: "0644"
+      notify: Restart biotic
+
+    - name: Deploy systemd service
+      template:
+        src: templates/biotic.service.j2
+        dest: /etc/systemd/system/biotic-pipeline.service
+        owner: root
+        group: root
+        mode: "0644"
+      notify: Reload systemd
+
+    - name: Enable and start biotic-pipeline service
+      systemd:
+        name: biotic-pipeline
+        enabled: true
+        state: started
+      when: biotic_start_service | default(true)
+
+  handlers:
+    - name: Reload systemd
+      systemd:
+        daemon_reload: true
+
+    - name: Restart biotic
+      systemd:
+        name: biotic-pipeline
+        state: restarted

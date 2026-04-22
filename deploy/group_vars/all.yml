@@ -1,0 +1,52 @@
+---
+# Biotic pipeline deployment variables
+# Override in inventory or host_vars as needed
+
+# Installation
+biotic_install_dir: "/opt/biotic-pipeline"
+biotic_repo_url: "ssh://git@github.com/ecsltae/biotic-interaction-pipeline.git"
+
+# Model weights (not in git — must be transferred separately)
+# Option 1: Copy from a local path on the Ansible controller
+biotic_copy_model: false
+biotic_model_source: "/path/to/distilled_BiomedBERT_v2"
+
+# Option 2: Symlink to an existing directory on the target host
+biotic_link_model: false
+
+# ============================================
+# Server configuration
+# ============================================
+biotic_host: "0.0.0.0"
+biotic_port: 8003
+biotic_workers: 1
+biotic_log_level: "info"
+
+# ============================================
+# Model configuration
+# ============================================
+biotic_model_dir: "{{ biotic_install_dir }}/model"
+biotic_device: "auto"        # auto | cuda:0 | cpu
+biotic_threshold: 0.25       # EP-relax F1=0.808 @ 0.25
+biotic_max_length: 256
+
+# ============================================
+# Filter data (optional — boosts recall)
+# ============================================
+biotic_interaction_dict: "{{ biotic_install_dir }}/data/interaction_dict.csv"
+biotic_species_dict: "{{ biotic_install_dir }}/data/species_dict.csv"
+
+# Deploy interaction_dict.csv from the classifier repo (small, in git)
+biotic_deploy_interaction_dict: true
+biotic_interaction_dict_url: "https://raw.githubusercontent.com/ecsltae/biotic-interaction-classifier/main/data/processed/interaction_dict.csv"
+
+# species_dict.csv is 4.2M names (~150MB) — copy separately if needed
+biotic_deploy_species_dict: false
+biotic_species_dict_source: "/path/to/species_dict.csv"
+
+# ============================================
+# Service management
+# ============================================
+biotic_start_service: true
+biotic_memory_limit: "8G"
+biotic_cpu_quota: ""

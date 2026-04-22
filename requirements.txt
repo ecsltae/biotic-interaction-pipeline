@@ -1,8 +1,0 @@
-torch>=2.0
-transformers>=4.40
-fastapi>=0.110
-uvicorn[standard]>=0.29
-pydantic>=2.0
-requests>=2.31
-pandas>=2.0
-pyahocorasick>=2.0

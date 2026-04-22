@@ -5,32 +5,34 @@ __pycache__/
 dist/
 build/
 .eggs/
-
-# Virtual env
-venv/
-env/
 .venv/
+venv/
 
-# Model files (large — deploy separately, never commit)
-models/
+# uv
+.uv/
+uv.lock
+
+# Model weights (large — deploy separately)
+model/
 *.pt
 *.pth
 *.bin
 *.safetensors
 
-# Runtime
-.env
-*.log
-logs/
-*.tmp
-
-# Data
+# Runtime / data
+config.toml.local
 data/*.csv
 data/*.json
 data/*.tsv
 results/
+logs/
+*.log
+*.tmp
 
 # IDE
 .vscode/
 .idea/
 .DS_Store
+
+# Claude
+.claude/

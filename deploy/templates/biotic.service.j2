@@ -1,0 +1,35 @@
+[Unit]
+Description=Biotic Interaction Pipeline API
+Documentation=https://github.com/ecsltae/biotic-interaction-pipeline
+After=network.target
+
+[Service]
+Type=simple
+User={{ biotic_user }}
+Group={{ biotic_group }}
+WorkingDirectory={{ biotic_install_dir }}
+
+ExecStart={{ ansible_env.HOME }}/.local/bin/uv run biotic-api
+
+Restart=on-failure
+RestartSec=10
+
+{% if biotic_memory_limit %}
+MemoryLimit={{ biotic_memory_limit }}
+{% endif %}
+{% if biotic_cpu_quota %}
+CPUQuota={{ biotic_cpu_quota }}
+{% endif %}
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths={{ biotic_install_dir }}
+PrivateTmp=true
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=biotic-pipeline
+
+[Install]
+WantedBy=multi-user.target

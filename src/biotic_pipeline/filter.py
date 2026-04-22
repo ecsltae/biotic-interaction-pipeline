@@ -9,7 +9,7 @@ A sentence passes if EITHER condition holds. The classifier downstream handles
 precision — the filter only removes sentences with zero interaction signal.
 
 Usage:
-    from filter import build_filter, has_interaction_signal
+    from biotic_pipeline.filter import build_filter, has_interaction_signal
 
     filt = build_filter(
         interaction_dict_csv="data/interaction_dict.csv",   # GloBI terms

@@ -3,26 +3,24 @@
 Batch article processor — biotic interaction sentence detection.
 
 Two-stage pipeline:
-  1. GloBI pre-filter  (local, pure Python, ~1ms/sentence)
-  2. Distilled BiomedBERT   (API call, ~14ms/sentence on GPU)
+  1. GloBI pre-filter  (local, ~1ms/sentence)
+  2. Distilled BiomedBERT via HTTP API  (~14ms/sentence on GPU)
 
 Usage:
-    # Process a folder of .txt files
-    python process_articles.py --input articles/ --output results.csv --api http://HOST:8003
+    # Folder of .txt files
+    python process_articles.py --input articles/ --output results.csv
 
-    # Process a CSV with an 'abstract' or 'full_text' column
-    python process_articles.py --input articles.csv --text-col full_text --output results.csv
+    # CSV with a text column
+    python process_articles.py --input abstracts.csv --text-col abstract --output results.csv
 
-    # Adjust threshold (default 0.25 = balanced F1=0.808; higher = more precise)
-    python process_articles.py --input articles/ --output results.csv --threshold 0.4
+    # Override API URL and threshold
+    python process_articles.py --input articles/ --output results.csv \\
+        --api http://HOST:8003 --threshold 0.4
 
-    # Use custom GloBI/species dictionaries
+    # Custom filter dictionaries
     python process_articles.py --input articles/ --output results.csv \\
         --interaction-dict data/interaction_dict.csv \\
         --species-dict data/species_dict.csv
-
-Environment:
-    CLASSIFIER_API   Base URL for the classifier API (overrides --api default)
 """
 
 import argparse
@@ -34,7 +32,7 @@ from typing import Iterator
 
 import requests
 
-from filter import build_filter, split_sentences
+from biotic_pipeline.filter import build_filter, split_sentences
 
 # ── Article loaders ───────────────────────────────────────────────────────
 
@@ -144,34 +142,45 @@ def process(articles: Iterator[tuple[str, str]], api_url: str, output: Path,
     elapsed = time.time() - t_start
     filter_rate = total_filtered / total_sentences * 100 if total_sentences else 0
     print(f"\n=== Done ===")
-    print(f"  Articles:           {total_articles}")
-    print(f"  Total sentences:    {total_sentences}")
-    print(f"  Passed filter:      {total_filtered} ({filter_rate:.1f}%)")
-    print(f"  Positive:           {total_positive}")
-    print(f"  Time:               {elapsed:.0f}s ({elapsed/60:.1f} min)")
-    print(f"  Output:             {output}")
+    print(f"  Articles:        {total_articles}")
+    print(f"  Total sentences: {total_sentences}")
+    print(f"  Passed filter:   {total_filtered} ({filter_rate:.1f}%)")
+    print(f"  Positive:        {total_positive}")
+    print(f"  Time:            {elapsed:.0f}s ({elapsed/60:.1f} min)")
+    print(f"  Output:          {output}")
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────
 
 def main():
-    import os
-    default_api = os.environ.get("CLASSIFIER_API", "http://localhost:8003")
+    # Read defaults from config.toml if present
+    try:
+        from biotic_pipeline.config import get_config
+        cfg = get_config()
+        default_api = f"http://{cfg.server.host}:{cfg.server.port}"
+        default_threshold = cfg.model.threshold
+        default_int_dict  = cfg.data.interaction_dict
+        default_sp_dict   = cfg.data.species_dict
+    except Exception:
+        default_api       = "http://localhost:8003"
+        default_threshold = 0.25
+        default_int_dict  = None
+        default_sp_dict   = None
 
     parser = argparse.ArgumentParser(description="Batch biotic interaction detector")
-    parser.add_argument("--input",            required=True, help="Folder of .txt files OR a .csv file")
-    parser.add_argument("--output",           required=True, help="Output CSV path")
-    parser.add_argument("--api",              default=default_api, help="Classifier API base URL")
-    parser.add_argument("--threshold",        type=float, default=0.25)
+    parser.add_argument("--input",            required=True)
+    parser.add_argument("--output",           required=True)
+    parser.add_argument("--api",              default=default_api)
+    parser.add_argument("--threshold",        type=float, default=default_threshold)
     parser.add_argument("--batch-size",       type=int,   default=500)
     parser.add_argument("--text-col",         default="full_text")
     parser.add_argument("--id-col",           default=None)
-    parser.add_argument("--interaction-dict", default=None, help="Path to interaction_dict.csv")
-    parser.add_argument("--species-dict",     default=None, help="Path to species_dict.csv")
+    parser.add_argument("--interaction-dict", default=default_int_dict)
+    parser.add_argument("--species-dict",     default=default_sp_dict)
     args = parser.parse_args()
 
-    inp  = Path(args.input)
-    out  = Path(args.output)
+    inp = Path(args.input)
+    out = Path(args.output)
     out.parent.mkdir(parents=True, exist_ok=True)
     int_dict = Path(args.interaction_dict) if args.interaction_dict else None
     sp_dict  = Path(args.species_dict)     if args.species_dict     else None
@@ -180,7 +189,7 @@ def main():
     try:
         r = requests.get(f"{args.api}/health", timeout=5)
         info = r.json()
-        print(f"  API: {info.get('model_dir', 'ok')}  device={info.get('device', '?')}", flush=True)
+        print(f"  API ok — model_dir={info.get('model_dir', '?')}  device={info.get('device', '?')}", flush=True)
     except Exception as e:
         print(f"ERROR: cannot reach API at {args.api}: {e}", file=sys.stderr)
         sys.exit(1)
