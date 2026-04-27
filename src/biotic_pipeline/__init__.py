@@ -1,3 +1,6 @@
 """Biotic interaction sentence detection pipeline."""
 
-__version__ = "1.0.0"
+from biotic_pipeline.classifier import BioticClassifier
+
+__version__ = "2.0.0"
+__all__ = ["BioticClassifier"]
