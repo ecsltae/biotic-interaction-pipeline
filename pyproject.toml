@@ -33,6 +33,9 @@ Source = "https://github.com/ecsltae/biotic-interaction-pipeline"
 [project.scripts]
 biotic-api = "biotic_pipeline.api_server:main"
 
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [tool.ruff]
 line-length = 120
 target-version = "py310"
