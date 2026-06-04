@@ -9,10 +9,10 @@ workers = 1
 log_level = "info"
 
 [model]
-# Path to the HuggingFace model directory (distilled_BiomedBERT_v2 or later)
+# Path to the model checkpoint directory (full_typed_a05_ner2 recommended)
 model_dir = ""         # must be set before running
 device = "auto"        # auto | cuda:0 | cpu
-threshold = 0.25       # EP-relax F1=0.808 @ this threshold
+threshold = 0.13       # EP-relax F1=0.868 @ this threshold (multi-task model)
 max_length = 256
 
 [data]
