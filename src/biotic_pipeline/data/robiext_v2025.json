@@ -1,0 +1,3978 @@
+{
+    "description": {
+        "terminology": "robiext",
+        "version": "v2025",
+        "date": "2025-02-11",
+        "file_creation": "2025-02-11",
+        "code": "robiext",
+        "type": "biotic_interaction",
+        "cleaners": {
+            "df_general": false,
+            "exclusion_general": false,
+            "exclusion_specific": true,
+            "length": false,
+            "alphanum": false
+        }
+    },
+    "concepts": [
+        {
+            "id": "RO_0002208",
+            "preferred_term": {
+                "term": "parasitoid of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "parsitoids of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002209",
+            "preferred_term": {
+                "term": "has parasitoid",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "has parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have parasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had parasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002445"
+            ]
+        },
+        {
+            "id": "RO_0002227",
+            "preferred_term": {
+                "term": "obligate parasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "obligate parasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "obligate parasites of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "obligate parasites",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002228",
+            "preferred_term": {
+                "term": "facultative parasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "facultative parasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "facultative parasites of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "facultative parasite",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002235",
+            "preferred_term": {
+                "term": "stem parasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "stem parasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "stem parasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "stem parasites of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002236",
+            "preferred_term": {
+                "term": "root parasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "root parasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "root parasites of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "root parasite",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002237",
+            "preferred_term": {
+                "term": "hemiparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "hemiparasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hemiparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hemiparasites of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002437",
+            "preferred_term": {
+                "term": "biotically interacts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "biotically interacted with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "biotically interact with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002321",
+                "RO_0002434"
+            ]
+        },
+        {
+            "id": "RO_0002438",
+            "preferred_term": {
+                "term": "trophically interacts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "trophically interact with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "trophically interacted with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "trophic",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002439",
+            "preferred_term": {
+                "term": "preys on",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "predator of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "predator",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "preys by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "preying",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "preying by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "predators of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "prey on",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "predators",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "predatory",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002438"
+            ]
+        },
+        {
+            "id": "RO_0002440",
+            "preferred_term": {
+                "term": "symbiotically interacts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "symbiont of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "symbiont",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "symbionts",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "symbiosis",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "symbionts of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "symbiotically interact with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002441",
+            "preferred_term": {
+                "term": "commensually interacts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "commensually interact with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "commensually interacted with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "commensalists of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "commensalists",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "commensalist",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "commensalist of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "commensualism",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002440"
+            ]
+        },
+        {
+            "id": "RO_0002442",
+            "preferred_term": {
+                "term": "mutualistically interacts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "mutualists of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "mutualist of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "mutualistically interacted with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "mutualistically interact with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "mutualism",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "mutualist",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "mutualists",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002440"
+            ]
+        },
+        {
+            "id": "RO_0002443",
+            "preferred_term": {
+                "term": "interacts with via parasite-host interaction",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "interacted with via parasite-host interaction",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "interact with via parasite-host interaction",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "parasite-host interactions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002440"
+            ]
+        },
+        {
+            "id": "RO_0002444",
+            "preferred_term": {
+                "term": "parasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "parasites of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002443",
+                "RO_0002454"
+            ]
+        },
+        {
+            "id": "RO_0002445",
+            "preferred_term": {
+                "term": "parasitized by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "parasitizing",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "parasitizes",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "parasitized",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "parasitize",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002443",
+                "RO_0002453"
+            ]
+        },
+        {
+            "id": "RO_0002446",
+            "preferred_term": {
+                "term": "participates in a abiotic-biotic interaction with",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002437"
+            ]
+        },
+        {
+            "id": "RO_0002453",
+            "preferred_term": {
+                "term": "host of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "hosts for",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hosts to",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hosting",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "host to",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hosts of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "host for",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002440"
+            ]
+        },
+        {
+            "id": "RO_0002454",
+            "preferred_term": {
+                "term": "has host",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had hosts",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have hosts",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has hosts",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hosted",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had host",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have host",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002440"
+            ]
+        },
+        {
+            "id": "RO_0002455",
+            "preferred_term": {
+                "term": "pollinates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "pollinator",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "pollinate",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "pollinators",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "pollinator of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "pollinated",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002442"
+            ]
+        },
+        {
+            "id": "RO_0002456",
+            "preferred_term": {
+                "term": "pollinated by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "pollinating",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002442"
+            ]
+        },
+        {
+            "id": "RO_0002457",
+            "preferred_term": {
+                "term": "acquires nutrients from",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "acquire nutrients",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "acquired nutrients",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "acquiring nutrients",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002437"
+            ]
+        },
+        {
+            "id": "RO_0002458",
+            "preferred_term": {
+                "term": "preyed upon by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "preys",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "preyed on",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "preyed",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "predating by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "prey by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "prey",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "predates by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "predate by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002438"
+            ]
+        },
+        {
+            "id": "RO_0002459",
+            "preferred_term": {
+                "term": "is vector for",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "vectors for",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002460",
+            "preferred_term": {
+                "term": "has vector",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "have vector",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had vector",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has vectors",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have vectors",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had vectors",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002469",
+            "preferred_term": {
+                "term": "provides nutrients for",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "provide nutrients",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "provided nutrients",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "providing nutrients",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002437"
+            ]
+        },
+        {
+            "id": "RO_0002470",
+            "preferred_term": {
+                "term": "eats",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "eat",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "eating",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "devour",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "devouring",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have ate",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "eats",
+                    "source": "synonym",
+                    "relevance": false
+                },
+                {
+                    "term": "has ate",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "devours",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "eated",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002437"
+            ]
+        },
+        {
+            "id": "RO_0002471",
+            "preferred_term": {
+                "term": "is eaten by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "eats by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "is devoured by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "were ate by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "eat by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "devours by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "were devoured by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "were devouring by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was ate by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "ate",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "devoured by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "are devoured by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "devour by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "eating by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "were eating by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was devouring by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "devouring by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was devoured by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "eated by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was eating by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002437"
+            ]
+        },
+        {
+            "id": "RO_0002553",
+            "preferred_term": {
+                "term": "hyperparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "hyperparasites",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002454"
+            ]
+        },
+        {
+            "id": "RO_0002554",
+            "preferred_term": {
+                "term": "hyperparasitized by",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002453"
+            ]
+        },
+        {
+            "id": "RO_0002555",
+            "preferred_term": {
+                "term": "allelopath of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "allelopaths of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002556",
+            "preferred_term": {
+                "term": "pathogen of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "pathogens",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "pathogens of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002454"
+            ]
+        },
+        {
+            "id": "RO_0002557",
+            "preferred_term": {
+                "term": "has pathogen",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had pathogens",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have pathogen",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had pathogen",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has pathogens",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have pathogens",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002453"
+            ]
+        },
+        {
+            "id": "RO_0002574",
+            "preferred_term": {
+                "term": "participates in a biotic-biotic interaction with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "participate in a biotic-biotic interaction with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "participating in a biotic-biotic interaction with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "participated in a biotic-biotic interaction with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002437"
+            ]
+        },
+        {
+            "id": "RO_0002618",
+            "preferred_term": {
+                "term": "visits",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002619",
+            "preferred_term": {
+                "term": "visited by",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002622",
+            "preferred_term": {
+                "term": "visits flowers of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "visiting flower of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "visited flower of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "visit flowers of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "visit flower of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "visiting flowers of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "visited flowers of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002618"
+            ]
+        },
+        {
+            "id": "RO_0002623",
+            "preferred_term": {
+                "term": "has flowers visited by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "have flowers visited by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had flower visited by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have flower visited by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had flowers visited by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has flower visited by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has flowers visited by",
+                    "source": "synonym",
+                    "relevance": false
+                }
+            ],
+            "parents": [
+                "RO_0002619"
+            ]
+        },
+        {
+            "id": "RO_0002624",
+            "preferred_term": {
+                "term": "lays eggs in",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "lay eggs on",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "laying eggs on",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "layed eggs on",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444",
+                "RO_0002618"
+            ]
+        },
+        {
+            "id": "RO_0002625",
+            "preferred_term": {
+                "term": "has eggs laid in by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "have eggs laid on by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "having eggs laid on by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had eggs laid on by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002445",
+                "RO_0002619"
+            ]
+        },
+        {
+            "id": "RO_0002626",
+            "preferred_term": {
+                "term": "kills",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002627",
+            "preferred_term": {
+                "term": "is killed by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "killed by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002574"
+            ]
+        },
+        {
+            "id": "RO_0002632",
+            "preferred_term": {
+                "term": "ectoparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "ectoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002633",
+            "preferred_term": {
+                "term": "has ectoparasite",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had ectoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have ectoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had ectoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have ectoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002445"
+            ]
+        },
+        {
+            "id": "RO_0002634",
+            "preferred_term": {
+                "term": "endoparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002635",
+            "preferred_term": {
+                "term": "has endoparasite",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had endoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have endoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002445"
+            ]
+        },
+        {
+            "id": "RO_0002636",
+            "preferred_term": {
+                "term": "mesoparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "mesoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0002637",
+            "preferred_term": {
+                "term": "has mesoparasite",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had mesoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have mesoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have mesoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had mesoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002445"
+            ]
+        },
+        {
+            "id": "RO_0002638",
+            "preferred_term": {
+                "term": "intercellular endoparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "intercellular endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "endoparasite intercellular",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002634"
+            ]
+        },
+        {
+            "id": "RO_0002639",
+            "preferred_term": {
+                "term": "has intercellular endoparasite",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had intercellular endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have intercellular endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had intercellular endoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have intercellular endoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002635"
+            ]
+        },
+        {
+            "id": "RO_0002640",
+            "preferred_term": {
+                "term": "intracellular endoparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "endoparasite intracellular",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002634"
+            ]
+        },
+        {
+            "id": "RO_0002641",
+            "preferred_term": {
+                "term": "has intracellular endoparasite",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "has intracellular endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have intracellular endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had intracellular endoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had intracellular endoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have intracellular endoparasite",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002635"
+            ]
+        },
+        {
+            "id": "RO_0002802",
+            "preferred_term": {
+                "term": "reservoir host of",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002453"
+            ]
+        },
+        {
+            "id": "RO_0002803",
+            "preferred_term": {
+                "term": "has reservoir host",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002454"
+            ]
+        },
+        {
+            "id": "RO_0008501",
+            "preferred_term": {
+                "term": "epiphyte of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "epiphytes of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002440"
+            ]
+        },
+        {
+            "id": "RO_0008502",
+            "preferred_term": {
+                "term": "has epiphyte",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "have epiphyte",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has epiphytes",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had epiphyte",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had epiphytes",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have epiphytes",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002440"
+            ]
+        },
+        {
+            "id": "RO_0008503",
+            "preferred_term": {
+                "term": "kleptoparasite of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "kleptoparasites",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002444"
+            ]
+        },
+        {
+            "id": "RO_0008504",
+            "preferred_term": {
+                "term": "kleptoparasitized by",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002445"
+            ]
+        },
+        {
+            "id": "RO_0008507",
+            "preferred_term": {
+                "term": "lays eggs on",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002618"
+            ]
+        },
+        {
+            "id": "RO_0008508",
+            "preferred_term": {
+                "term": "has eggs laid on by",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002619"
+            ]
+        },
+        {
+            "id": "RO_0002222",
+            "preferred_term": {
+                "term": "temporally related to",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_0002434",
+            "preferred_term": {
+                "term": "interacts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "interacting with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "interact with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_0002451",
+            "preferred_term": {
+                "term": "transmitted by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "was transmited",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had been transmited",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have transmited",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "transmitting",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was transmiting by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have been transmited",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had transmited",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was being transmited",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "transmit by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "is transmiting by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "is being transmited",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has transmited",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002321"
+            ]
+        },
+        {
+            "id": "RO_0002465",
+            "preferred_term": {
+                "term": "is symbiosis",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002563"
+            ]
+        },
+        {
+            "id": "RO_0002466",
+            "preferred_term": {
+                "term": "is commensalism",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002465"
+            ]
+        },
+        {
+            "id": "RO_0002467",
+            "preferred_term": {
+                "term": "is mutualism",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002465"
+            ]
+        },
+        {
+            "id": "RO_0002468",
+            "preferred_term": {
+                "term": "is parasitism",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002465"
+            ]
+        },
+        {
+            "id": "RO_0002211",
+            "preferred_term": {
+                "term": "regulates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "regulate",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002411"
+            ]
+        },
+        {
+            "id": "RO_0002212",
+            "preferred_term": {
+                "term": "negatively regulates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "negatively regulate",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002211",
+                "RO_0002305"
+            ]
+        },
+        {
+            "id": "RO_0002213",
+            "preferred_term": {
+                "term": "positively regulates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "positively regulate",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002211",
+                "RO_0002304"
+            ]
+        },
+        {
+            "id": "RO_0008505",
+            "preferred_term": {
+                "term": "creates habitat for",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "created habitat for",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "create habitat for",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "create habitats for",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "created habitats for",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "creates habitats for",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "creating habitats for",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "creating habitat for",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002321"
+            ]
+        },
+        {
+            "id": "RO_0002303",
+            "preferred_term": {
+                "term": "has habitat",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had habitats",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "having habitat",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have habitat",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have habitats",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had habitat",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has habitats",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "having habitats",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002321"
+            ]
+        },
+        {
+            "id": "RO_0011002",
+            "preferred_term": {
+                "term": "regulates activity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "regulate activities of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "regulate activity of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002566"
+            ]
+        },
+        {
+            "id": "RO_0011003",
+            "preferred_term": {
+                "term": "regulates quantity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "regulate quantity of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "regulate quantities of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002566"
+            ]
+        },
+        {
+            "id": "RO_0011004",
+            "preferred_term": {
+                "term": "indirectly regulates activity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "indirectly regulate activities of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "indirectly regulate activity of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011002"
+            ]
+        },
+        {
+            "id": "RO_0011009",
+            "preferred_term": {
+                "term": "directly positively regulates quantity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "directly positively regulate quantity of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "directly activate",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "directly positively regulate quantities of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "directly activates",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011021"
+            ]
+        },
+        {
+            "id": "RO_0011010",
+            "preferred_term": {
+                "term": "directly negatively regulates quantity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "direclty inhibits",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "directly negatively regulate quantity of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "directly negatively regulate quantities of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "directly inhibit",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011021"
+            ]
+        },
+        {
+            "id": "RO_0011013",
+            "preferred_term": {
+                "term": "indirectly positively regulates activity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "indirectly activate",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "indirectly positively regulate activities of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "indirectly positively regulate activity of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011004"
+            ]
+        },
+        {
+            "id": "RO_0011016",
+            "preferred_term": {
+                "term": "indirectly negatively regulates activity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "indirectly negatively regulate activities of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "indirectly negatively regulate activity of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "indirectly inhibit",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011004"
+            ]
+        },
+        {
+            "id": "RO_0011021",
+            "preferred_term": {
+                "term": "directly regulates quantity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "directly regulate quantities of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "directly regulate quantity of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011003"
+            ]
+        },
+        {
+            "id": "RO_0012012",
+            "preferred_term": {
+                "term": "indirectly regulates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "indirectly regulate",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002211",
+                "RO_0012011"
+            ]
+        },
+        {
+            "id": "RO_0002332",
+            "preferred_term": {
+                "term": "regulates levels of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "regulates level of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "regulate level of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "regulate levels of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002328"
+            ]
+        },
+        {
+            "id": "RO_0002334",
+            "preferred_term": {
+                "term": "regulated by",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002427"
+            ]
+        },
+        {
+            "id": "RO_0002335",
+            "preferred_term": {
+                "term": "negatively regulated by",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002334"
+            ]
+        },
+        {
+            "id": "RO_0002336",
+            "preferred_term": {
+                "term": "positively regulated by",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002334"
+            ]
+        },
+        {
+            "id": "RO_0002428",
+            "preferred_term": {
+                "term": "involved in regulation of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "involved in regulations of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002263",
+                "RO_0002431"
+            ]
+        },
+        {
+            "id": "RO_0002429",
+            "preferred_term": {
+                "term": "involved in positive regulation of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "involved in positive regulations of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002428"
+            ]
+        },
+        {
+            "id": "RO_0002430",
+            "preferred_term": {
+                "term": "involved in negative regulation of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "involved in negative regulations of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002428"
+            ]
+        },
+        {
+            "id": "RO_0002431",
+            "preferred_term": {
+                "term": "involved in or involved in regulation of",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002264",
+                "RO_0002328",
+                "RO_0002500"
+            ]
+        },
+        {
+            "id": "RO_0002578",
+            "preferred_term": {
+                "term": "directly regulates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "directly regulate",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002211",
+                "RO_0002412"
+            ]
+        },
+        {
+            "id": "RO_0002596",
+            "preferred_term": {
+                "term": "capable of regulating",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002500"
+            ]
+        },
+        {
+            "id": "RO_0002597",
+            "preferred_term": {
+                "term": "capable of negatively regulating",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002596"
+            ]
+        },
+        {
+            "id": "RO_0002598",
+            "preferred_term": {
+                "term": "capable of positively regulating",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002596"
+            ]
+        },
+        {
+            "id": "RO_0002629",
+            "preferred_term": {
+                "term": "directly positively regulates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "directly positively regulate",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002213",
+                "RO_0002578"
+            ]
+        },
+        {
+            "id": "RO_0002630",
+            "preferred_term": {
+                "term": "directly negatively regulates",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "directly negatively regulate",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002212",
+                "RO_0002578"
+            ]
+        },
+        {
+            "id": "RO_0002801",
+            "preferred_term": {
+                "term": "co-roosts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "roost",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "roosting",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-roosted with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-roosting with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-roost with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "roost with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "roosts with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "roosting with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "roosts",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "roosted with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0008506"
+            ]
+        },
+        {
+            "id": "RO_0008509",
+            "preferred_term": {
+                "term": "has roost",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002303"
+            ]
+        },
+        {
+            "id": "RO_0002225",
+            "preferred_term": {
+                "term": "develops from part of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "develop from part of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002202"
+            ]
+        },
+        {
+            "id": "RO_0002226",
+            "preferred_term": {
+                "term": "develops in",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "develop in",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002258"
+            ]
+        },
+        {
+            "id": "RO_0002233",
+            "preferred_term": {
+                "term": "has input",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0000057"
+            ]
+        },
+        {
+            "id": "RO_0002234",
+            "preferred_term": {
+                "term": "has output",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0000057"
+            ]
+        },
+        {
+            "id": "RO_0011014",
+            "preferred_term": {
+                "term": "destabilizes quantity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "destabilize quantity of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011010"
+            ]
+        },
+        {
+            "id": "RO_0011015",
+            "preferred_term": {
+                "term": "stabilizes quantity of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "stabilize quantity of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0011009"
+            ]
+        },
+        {
+            "id": "RO_0002324",
+            "preferred_term": {
+                "term": "developmentally related to",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_0002325",
+            "preferred_term": {
+                "term": "colocalizes with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "colocalized with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "colocalize with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002323"
+            ]
+        },
+        {
+            "id": "RO_0002326",
+            "preferred_term": {
+                "term": "contributes to",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "contributing to",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "contribute to",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002216",
+                "RO_0002329"
+            ]
+        },
+        {
+            "id": "RO_0002371",
+            "preferred_term": {
+                "term": "attached to",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002170",
+                "RO_0002177"
+            ]
+        },
+        {
+            "id": "RO_0002433",
+            "preferred_term": {
+                "term": "contributes to morphology of",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002131"
+            ]
+        },
+        {
+            "id": "RO_0002461",
+            "preferred_term": {
+                "term": "partner in",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0000056"
+            ]
+        },
+        {
+            "id": "RO_0002462",
+            "preferred_term": {
+                "term": "subject participant in",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002461"
+            ]
+        },
+        {
+            "id": "RO_0002463",
+            "preferred_term": {
+                "term": "target participant in",
+                "relevance": true
+            },
+            "synonyms": [],
+            "parents": [
+                "RO_0002461"
+            ]
+        },
+        {
+            "id": "RO_0002502",
+            "preferred_term": {
+                "term": "depends on",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "depend on",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_0003002",
+            "preferred_term": {
+                "term": "represses expression of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "repressing expression of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "represse expression of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002449"
+            ]
+        },
+        {
+            "id": "RO_0003003",
+            "preferred_term": {
+                "term": "increases expression of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "increasing expression of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "increase expression of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002450"
+            ]
+        },
+        {
+            "id": "RO_0008506",
+            "preferred_term": {
+                "term": "ecologically co-occurs with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "co-occuring with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-occurs with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-occured with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "ecologically co-occured with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-occur with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "ecologically co-occur with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0002321"
+            ]
+        },
+        {
+            "id": "RO_0012003",
+            "preferred_term": {
+                "term": "acts on population of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "act on population of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ],
+            "parents": [
+                "RO_0000057"
+            ]
+        },
+        {
+            "id": "RO_e000001",
+            "preferred_term": {
+                "term": "contaminated by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "contaminating by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "contaminated",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000002",
+            "preferred_term": {
+                "term": "has contaminated",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "contaminates",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have contaminated",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had contaminated",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "contaminate",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has contaminating",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "contamination",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have contaminating",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000003",
+            "preferred_term": {
+                "term": "seropositive to",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000004",
+            "preferred_term": {
+                "term": "baits",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000005",
+            "preferred_term": {
+                "term": "infested by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "was infested by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "infested",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "were infested by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was infesting by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "infestation",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "were infesting by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000006",
+            "preferred_term": {
+                "term": "has infested",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "have infested",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "infest",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "infests",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000007",
+            "preferred_term": {
+                "term": "feed on",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "feeding on",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "fed on",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "feed off",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "feeds on",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000008",
+            "preferred_term": {
+                "term": "fed by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "feed by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "feeding by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000009",
+            "preferred_term": {
+                "term": "ingested by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "were ingested by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "were ingesting by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "ingestion",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was ingesting by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "was ingested by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000010",
+            "preferred_term": {
+                "term": "has ingested",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "have ingested",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had ingested",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "ingests",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "ingest",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000011",
+            "preferred_term": {
+                "term": "hunts",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had hunted",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hunt",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hunting",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has hunted",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000012",
+            "preferred_term": {
+                "term": "hunted by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "hunted",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hunt by",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "hunting by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000013",
+            "preferred_term": {
+                "term": "graze",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "grazed",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "grazing",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "grazes",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000014",
+            "preferred_term": {
+                "term": "feces eaten by",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000015",
+            "preferred_term": {
+                "term": "ectoparasitoid of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "ectoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000016",
+            "preferred_term": {
+                "term": "has ectoparasitoid",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had ectoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have ectoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had ectoparasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have ectoparasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has ectoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000017",
+            "preferred_term": {
+                "term": "interspecific interaction",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "interspecies interaction",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "interspecific interactions",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "interspecies interactions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000018",
+            "preferred_term": {
+                "term": "endoparasitoid of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "endoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000019",
+            "preferred_term": {
+                "term": "has endoparasitoid",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had endoparasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have endoparasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had endoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has endoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have endoparasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000020",
+            "preferred_term": {
+                "term": "idiobiont parasitoid of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "idiobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000021",
+            "preferred_term": {
+                "term": "has idiobiont parasitoid",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "has idiobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have idiobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have idiobiont parasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had idiobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had idiobiont parasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000022",
+            "preferred_term": {
+                "term": "koinobiont parasitoid of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "koinobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000023",
+            "preferred_term": {
+                "term": "has koinobiont parasitoid",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "have koinobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had koinobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have koinobiont parasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has koinobiont parasitoids",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had koinobiont parasitoid",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000024",
+            "preferred_term": {
+                "term": "has dispersal vector",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "had dispersal vector",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have dispersal vector",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have dispersal vectors",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "has dispersal vectors",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had dispersal vectors",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000025",
+            "preferred_term": {
+                "term": "lives near",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "living near",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "lived near",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "live near",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000026",
+            "preferred_term": {
+                "term": "lives inside of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "live inside of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "lived inside of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "living inside of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000027",
+            "preferred_term": {
+                "term": "adjacent to",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000028",
+            "preferred_term": {
+                "term": "amensalistically interacts with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "amensalists",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "amensalistically interact with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "amensalist of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "amensalistically interacted with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000029",
+            "preferred_term": {
+                "term": "antibiosis interaction with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "antiobiosis interactions with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000030",
+            "preferred_term": {
+                "term": "allelopathic interaction with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "allelopathic interactions with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000031",
+            "preferred_term": {
+                "term": "myrmecophile interaction",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "myrmecophile interactions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000032",
+            "preferred_term": {
+                "term": "phoresy interaction",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "phoresis",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "phoretic",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "phoresy interactions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000033",
+            "preferred_term": {
+                "term": "inquilinism interaction",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "inquilinism interactions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000034",
+            "preferred_term": {
+                "term": "trophallactic interaction",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "trophallactic interactions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000035",
+            "preferred_term": {
+                "term": "copulates with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "copulate with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "copulated with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000036",
+            "preferred_term": {
+                "term": "seeds dispersed by",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000037",
+            "preferred_term": {
+                "term": "disperses seeds of",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "disperse seed of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "dispersing seed of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "dispersed seeds of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "dispersed seed of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "dispersing seeds of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "disperses seed of",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "disperse seeds of",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000038",
+            "preferred_term": {
+                "term": "neutralizes",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "neutralize",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "had neutralized",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "have neutralized",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000039",
+            "preferred_term": {
+                "term": "neutralized by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "neutralizing by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000040",
+            "preferred_term": {
+                "term": "cooperates with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "cooperate with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000041",
+            "preferred_term": {
+                "term": "transported by",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "transported with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "transporting by",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000043",
+            "preferred_term": {
+                "term": "absorded by",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000044",
+            "preferred_term": {
+                "term": "exposed to",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000045",
+            "preferred_term": {
+                "term": "invaded",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "invade",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "invades",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "invasion",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "invading",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "invasions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000046",
+            "preferred_term": {
+                "term": "migrates with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "migrating",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "migration",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "migrated",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "migrates",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "migrations",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000047",
+            "preferred_term": {
+                "term": "coevolves",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "co-evolving",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "coevolving",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "coevolved",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-evolution",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "coevolutions",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-evolved",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "coevolution",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "co-evolutions",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000048",
+            "preferred_term": {
+                "term": "communicates with",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "communicate with",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "communicating with",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000049",
+            "preferred_term": {
+                "term": "attracts",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "attractant",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000050",
+            "preferred_term": {
+                "term": "attracted by",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000051",
+            "preferred_term": {
+                "term": "reservoir host",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "reservoir hosts",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000052",
+            "preferred_term": {
+                "term": "competent host",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "competent hosts",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000053",
+            "preferred_term": {
+                "term": "colonize",
+                "relevance": true
+            },
+            "synonyms": [
+                {
+                    "term": "colonizes",
+                    "source": "synonym",
+                    "relevance": true
+                },
+                {
+                    "term": "colonized",
+                    "source": "synonym",
+                    "relevance": true
+                }
+            ]
+        },
+        {
+            "id": "RO_e000054",
+            "preferred_term": {
+                "term": "colonized by",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000055",
+            "preferred_term": {
+                "term": "affecting",
+                "relevance": true
+            },
+            "synonyms": []
+        },
+        {
+            "id": "RO_e000056",
+            "preferred_term": {
+                "term": "affected by",
+                "relevance": true
+            },
+            "synonyms": []
+        }
+    ]
+}

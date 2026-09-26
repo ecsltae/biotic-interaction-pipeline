@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "biotic-pipeline"
 description = "Sentence-level biotic interaction detector: GloBI pre-filter + multi-task BiomedBERT (EP-relax F1=0.868)"
 readme = "README.md"
-version = "2.1.0"
+version = "3.0.0"
 
 dependencies = [
     "torch>=2.0",
