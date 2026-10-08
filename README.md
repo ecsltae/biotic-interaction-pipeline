@@ -1,16 +1,17 @@
 # biotic-interaction-pipeline
 
-Sentence-level biotic interaction detector for bulk article processing.
+Biotic interaction detection for bulk article processing: a pair-conditioned triple verifier
+that also returns direction (recommended), and the legacy sentence-level classifier.
 
 Detects sentences describing ecological/parasitic/symbiotic interactions between two species
 (e.g. "Wolbachia pipientis infects Drosophila melanogaster").
 
 ## Two paths, two decision units
 
-This package now ships two models, and they answer different questions.
+This package ships two models, and they answer different questions.
 
 ```
-                                        ┌─► TripleVerifier  (v3, recommended)
+                                        ┌─► TripleVerifier  (v3.1, recommended)
 text                                    │     asks: do THESE TWO taxa interact,
  └─► sentence splitter                  │           and which is the subject?
        └─► GloBI pre-filter             │     input: (taxon, relation, taxon) + passage
@@ -22,18 +23,19 @@ text                                    │     asks: do THESE TWO taxa interact
 ```
 
 **Which to use.** `TripleVerifier` unless you have a reason not to. On a 437-row
-expert-graded benchmark, against the sentence-level model's own recorded decisions:
+expert-graded benchmark (labels revised 2026-10-06), at the default threshold with the
+candidate rules on:
 
-| | precision | recall | F1 |
-|---|---|---|---|
-| **TripleVerifier** @ 0.50 | **0.852** | **0.959** | **0.902** |
-| BioticClassifier (legacy) | 0.850 | 0.785 | 0.816 |
+| | precision | recall |
+|---|---|---|
+| **TripleVerifier** @ 0.50 | **0.888** | **0.948** |
+| BioticClassifier (legacy, its recorded decisions) | 0.863 | 0.781 |
 
-Same precision, seventeen points more recall, McNemar p = 2.3e-04. It also returns the
-argument direction for free — same model, same speed, ~34 candidates/s on 8 CPU threads.
+More precise, with seventeen points more recall. It also returns the argument direction
+for free (same model, same speed, ~32 candidates/s on 8 CPU threads, ~1.5 GB RAM).
 
 **The catch, stated plainly.** `TripleVerifier` takes a *candidate triple*, not a
-sentence. This package does not yet generate candidates: the `text → sentences →
+sentence. This package does not generate candidates: the `text → sentences →
 pre-filter` stages produce sentences, and something must turn those into
 (taxon, relation, taxon) tuples before the verifier can score them. If you already
 have a rule layer that emits candidates — two taxon surface forms and an interaction
@@ -45,40 +47,69 @@ unit is different, and a sentence alone cannot be scored by the verifier.
 
 ### TripleVerifier
 
+The weights are not in this repository (409 MB zipped). Unzip `joint_a05_s1.zip` and
+pass the folder:
+
 ```python
 from biotic_pipeline import TripleVerifier
 
-v = TripleVerifier("path/to/joint_a05_s1")
-v.verify("Wolbachia", "infects", "Drosophila melanogaster",
-         "Wolbachia pipientis infects Drosophila melanogaster.")
-# {'interacts': 1, 'p_interact': 0.9992, 'direction': 'FORWARD',
-#  'p_species1_is_subject': 0.9368, 'both_taxa_located': 1, ...}
+v = TripleVerifier("path/to/joint_a05_s1")      # CPU by default if no GPU; device="cuda:0" to force
+v.verify("Haemophilus influenzae", "pathogen of", "human",
+         "Haemophilus influenzae is a major pathogen of humans.")
+# {'interacts': 1, 'p_interact': 0.999, 'rejected_by_rule': '', 'direction': 'FORWARD',
+#  'p_species1_is_subject': 0.9997, 'direction_confidence': 0.9994, 'symmetric_relation': 0,
+#  'both_taxa_located': 1, 'unknown_polarity': 0, 'truncated': 0, 'threshold_used': 0.5, ...}
 
-v.verify_batch([(s1, rel, s2, passage), ...], threshold=0.88)
+v.verify_batch([(s1, rel, s2, passage), ...])     # list of dicts, same order
+v.verify_batch(candidates, threshold=0.95)        # buy precision (table below)
 ```
 
-Order does not matter: give the same pair the other way round and `p_interact` is
-bit-identical while `direction` flips. That is architectural, not learned.
+Give the taxa **as they appear in the passage** (surface forms such as "rabbits", not
+canonical names): the model marks them in the text.
 
-`direction` is `FORWARD` (species1 is the subject), `REVERSE`, or `UNCERTAIN`, and is
-judged against the **canonical** relation — so `Leptodora --prey--> Bosmina` returns
-`REVERSE`, because the canonical relation is *preyed upon by*.
+| key | meaning |
+|---|---|
+| `interacts` | 0/1, **the decision** — replaces the sentence classifier's verdict |
+| `p_interact` | model score 0–1, before the rules; use it for your own cutoff |
+| `rejected_by_rule` | `""`, or the name of the candidate rule that rejected the row |
+| `direction` | `FORWARD` (species1 acts on species2), `REVERSE`, `BIDIRECTIONAL` (a mutual relation: symbiosis, *interacts with*, *co-occurs with*), or `UNCERTAIN` (not confident, a taxon not found, or no interaction) |
+| `p_species1_is_subject`, `direction_confidence` | what `direction` is thresholded from (`None` for mutual relations) |
+| `both_taxa_located` | 0 if a taxon string was not found in the passage — treat the row as unreviewed |
+| `truncated` | 1 if the passage exceeded the 256-wordpiece window; split long abstracts into sentences |
+| `unknown_polarity` | 1 if the relation is outside the polarity lexicon |
 
-**Thresholds.** 0.50 is the default and is validated: three independent held-out dev
-splits each chose ≈0.5 for maximum F1. To buy precision:
+`FORWARD`/`REVERSE` are judged against the **canonical** relation, so
+`Leptodora --prey--> Bosmina` returns `REVERSE`: the canonical relation is *preyed upon
+by*, and *Leptodora* is the predator. Order does not matter: give the same pair the
+other way round and `p_interact` is bit-identical while `FORWARD`/`REVERSE` swap. That is
+architectural, not learned.
 
-| threshold | precision | recall | F1 |
-|---|---|---|---|
-| 0.50 | 0.852 | 0.959 | 0.902 |
-| 0.88 | 0.871 | 0.907 | 0.888 |
-| 0.95 | 0.882 | 0.878 | 0.880 |
-| 0.99 | 0.924 | 0.744 | 0.824 |
+**Candidate rules** (`rules=True`, the default) reject, before the model's verdict,
+candidates that cannot be an interaction between two distinct organisms: the same
+organism named twice, a taxon and its own clade, a taxonomic author parsed as a taxon
+(*Pterostichus melanarius (Illiger)*), a non-biotic relation term, an explicit negation
+of the pair, an organ or syndrome parsed as a taxon, and an adjective inside a pathogen's
+name (*equine* influenza virus). Pass `rules=False` to turn them off.
 
-**When to distrust it.** `both_taxa_located = 0` means a taxon string was not found in
-the passage and the answer is much weaker. `unknown_polarity = 1` means the relation is
-outside the polarity lexicon and the direction fell back to a default. The main residual
-error is co-occurrence in a shared host — two organisms both related to a third can read
-as interacting. Upstream entity errors are not fixed here.
+**Thresholds.** 0.50 is the default, fixed before evaluation rather than tuned. Raising it
+buys precision (same benchmark, rules on):
+
+| threshold | precision | recall |
+|---|---|---|
+| 0.50 | 0.888 | 0.948 |
+| 0.70 | 0.890 | 0.932 |
+| 0.90 | 0.907 | 0.892 |
+| 0.95 | 0.920 | 0.869 |
+| 0.99 | 0.969 | 0.745 |
+
+**When to distrust it.** The main residual error is co-occurrence in a shared host: two
+organisms both related to a *third* one can read as interacting (*Acanthamoeba* and
+*Pseudomonas* both infecting a horse). Upstream entity errors are not fixed here: if the
+rule layer hands it the wrong species, it will verify the wrong species. Direction is
+weakest on bare relational nouns (*host*, *pathogen*, *infection*) and strongest where
+the relation word carries direction (*pathogen of*). `BIDIRECTIONAL` comes from the
+relation lexicon, not the model, so it is only as complete as the lexicon's list of
+mutual relations.
 
 ## Architecture (legacy sentence path)
 

@@ -25,7 +25,7 @@ max_length = 256
 model_dir = ""         # joint_a05_s1 checkpoint
 device = "auto"
 threshold = 0.50       # validated on three held-out dev splits; 0.88 for more precision
-dir_abstain = 0.71     # report a direction only above this confidence
+dir_abstain = 0.60     # 75% coverage at 0.889 accuracy on 84 human-annotated items
 max_length = 256
 threads = 8
 

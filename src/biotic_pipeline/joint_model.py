@@ -9,7 +9,7 @@ invariant by construction, and the direction head is exactly antisymmetric, so
 P(@ is subject) = 1 - P(# is subject) at every parameter setting.
 
 The relation string never reaches the encoder. It enters only at the direction head, as a
-2-valued polarity embedding.
+polarity embedding (2- or 3-valued depending on the checkpoint).
 """
 import torch, torch.nn as nn
 from transformers import AutoModelForSequenceClassification
@@ -39,25 +39,48 @@ def span_pool(hidden, ids, marker):
 
 
 class DirectionHead(nn.Module):
-    """Exactly antisymmetric: s(hA,hB) = -s(hB,hA) for every parameter setting."""
-    def __init__(self, hid=768, pol_dim=16, inner=256):
+    """Antisymmetric direction score, optionally with a symmetric directedness score.
+
+    s_dir = g(hA, hB, cls, pol) - g(hB, hA, cls, pol)   exactly antisymmetric
+    s_und = h(hA, hB, cls, pol) + h(hB, hA, cls, pol)   exactly symmetric (if trained)
+
+    n_pol is 2 for checkpoints trained with polarity {patient, agent} and 3 for those trained
+    with {patient, agent, symmetric}; `from_state_dict` reads both off the saved weights so a
+    checkpoint can never be loaded with the wrong head.
+    """
+    def __init__(self, hid=768, pol_dim=16, inner=256, n_pol=2, with_und=False):
         super().__init__()
-        self.pol_emb = nn.Embedding(2, pol_dim)
-        self.g = nn.Sequential(nn.Linear(3 * hid + pol_dim, inner), nn.GELU(),
-                               nn.Dropout(0.1), nn.Linear(inner, 1))
+        self.n_pol = n_pol
+        self.pol_emb = nn.Embedding(n_pol, pol_dim)
+        mk = lambda: nn.Sequential(nn.Linear(3 * hid + pol_dim, inner), nn.GELU(),
+                                   nn.Dropout(0.1), nn.Linear(inner, 1))
+        self.g = mk()
+        self.h = mk() if with_und else None
+    @classmethod
+    def from_state_dict(cls, sd, hid=768):
+        n_pol, pol_dim = sd["pol_emb.weight"].shape
+        inner = sd["g.0.weight"].shape[0]
+        head = cls(hid, pol_dim=pol_dim, inner=inner, n_pol=n_pol, with_und="h.0.weight" in sd)
+        head.load_state_dict(sd)
+        return head
     def forward(self, hA, hB, cls, pol):
         pe = self.pol_emb(pol)
-        return (self.g(torch.cat([hA, hB, cls, pe], -1))
-                - self.g(torch.cat([hB, hA, cls, pe], -1))).squeeze(-1)
+        ab = torch.cat([hA, hB, cls, pe], -1)
+        ba = torch.cat([hB, hA, cls, pe], -1)
+        s_dir = (self.g(ab) - self.g(ba)).squeeze(-1)
+        s_und = (self.h(ab) + self.h(ba)).squeeze(-1) if self.h is not None else None
+        return s_dir, s_und
     def n_params(self):
         return sum(p.numel() for p in self.parameters())
 
 
 class Student(nn.Module):
-    def __init__(self, enc=ENC, detach_dir=False):
+    def __init__(self, enc=ENC, detach_dir=False, dir_state=None):
         super().__init__()
         self.bert = AutoModelForSequenceClassification.from_pretrained(enc, num_labels=2)
-        self.dir = DirectionHead(self.bert.config.hidden_size)
+        hid = self.bert.config.hidden_size
+        self.dir = (DirectionHead.from_state_dict(dir_state, hid) if dir_state is not None
+                    else DirectionHead(hid))
         self.detach_dir = detach_dir
     def encode(self, input_ids, attention_mask, token_type_ids=None):
         kw = dict(input_ids=input_ids, attention_mask=attention_mask, output_hidden_states=True)
@@ -69,7 +92,7 @@ class Student(nn.Module):
         h = hid.detach() if self.detach_dir else hid
         hA, okA = span_pool(h, input_ids, AT_ID)
         hB, okB = span_pool(h, input_ids, HASH_ID)
-        s = self.dir(hA, hB, h[:, 0], pol) if pol is not None else None
-        return logits, s, (okA * okB)
+        s, u = self.dir(hA, hB, h[:, 0], pol) if pol is not None else (None, None)
+        return logits, s, (okA * okB), u
 
 

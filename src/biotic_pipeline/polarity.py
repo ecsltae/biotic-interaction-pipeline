@@ -42,7 +42,7 @@ for t in ['is vector for','vector for','vectors for','has vector','vector of','v
 AGENT_NOUN=r'^(pathogen|parasite|parasitoid|predator|ectoparasite|endoparasite|hyperparasite|kleptoparasite|mesoparasite|symbiont|vector|epiphyte|pollinator|consumer|grazer|herbivore|infector)s?( of| for| to)?$'
 AGENT_VERB=r'^(infect|prey|eat|invad|coloni[sz]|parasiti[sz]|pollinat|transmit|attack|kill|consum|graz|hunt|feed|visit|ingest|contaminat|infest|affect|bait|regulat|neutrali[sz]|attract|disperse|has )'
 PATIENT=r'( by$)|^(exposed to|resistance to|resistant to|susceptible to|host|hosts|host of|host for|hosts of|hosts for|prey of|preyed|victim|reservoir)$'
-SYM=r'^(interacts? with|associated with|co-?occurs? with|symbiosis|mutualism|commensalism|parasite-host|coevolv|migrates? with|adjacent|present in|found in|co-roosts? with|cooperates? with|communicates? with|copulates? with)'
+SYM=r'^(interacts? with|associated with|co-?occurs? with|symbiosis|mutualism|commensalism|parasite-host|coevolv|migrates? with|adjacent|present in|found in|co-roosts? with|cooperates? with|communicates? with|copulates? with|compet(es?|ing|ition)( with)?|co-?infect\w*|mutualistic)'
 ACTIVE_MORPH=re.compile(r'^(parasiti[sz]|infest|infect|coloni[sz]|invad|attack|kill|consum|graz|hunt|pollinat|predat|prey|eat|ingest|contaminat)(ing|es|e|s)?$')
 def polarity(rel, ro_id=None):
     """returns (pol, source)"""
@@ -62,3 +62,22 @@ def polarity(rel, ro_id=None):
         if re.match(AGENT_VERB,k): return 1,'morph_agent_verb'
         if k in SURF: return 0,'robi_surface_sym'
     return None,'none'
+
+
+def polarity_to_index(p, n_pol):
+    """Map a lexicon polarity to the direction head's embedding index, exactly as in training.
+
+    p is +1 (agent-side subject), -1 (patient-side subject), 0 (symmetric relation) or None
+    (relation not in the lexicon).
+      n_pol == 2  (trained with {patient, agent}): agent -> 1, everything else -> 0
+      n_pol == 3  (trained with {patient, agent, symmetric}): symmetric -> 2, agent -> 1, else 0
+    Both mappings are the ones the training scripts used; a mismatch here is train/serve skew.
+    """
+    if n_pol == 3 and p == 0:
+        return 2
+    return 1 if (p is not None and p > 0) else 0
+
+
+def is_symmetric(p):
+    """A relation the lexicon calls symmetric has no subject: the interaction is bidirectional."""
+    return p == 0

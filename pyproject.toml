@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "biotic-pipeline"
-description = "Sentence-level biotic interaction detector: GloBI pre-filter + multi-task BiomedBERT (EP-relax F1=0.868)"
+description = "Biotic interaction detection: pair-conditioned triple verifier with direction (recommended), plus the legacy sentence-level classifier"
 readme = "README.md"
-version = "3.0.0"
+version = "3.1.0"
 
 dependencies = [
     "torch>=2.0",
@@ -35,6 +35,11 @@ biotic-api = "biotic_pipeline.api_server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+# The relation lexicons are read at import time; without this they are left out of
+# the wheel and `import biotic_pipeline` fails with FileNotFoundError.
+[tool.setuptools.package-data]
+biotic_pipeline = ["data/*.json"]
 
 [tool.setuptools.package-dir]
 "" = "src"
